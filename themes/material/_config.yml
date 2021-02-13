@@ -9,7 +9,7 @@ head:
     apple_touch_icon: "/img/favicon.png"
     keywords:
     site_verification:
-        google:
+        google: "9O2eyN0wIduxg7wLDrbmJXIoQBmGEq0V5xZS6Cr22lI"
         baidu:
 
     # Enable generate structured-data as JSON+LD for SEO or not.
@@ -281,7 +281,7 @@ search:
 # Available value:
 #     baidu | google | cnzz
 analytics:
-    google_site_id:
+    google_site_id: "G-0SLXBVQ1RN"
     baidu_site_id:
     cnzz_site_id:
 
