@@ -212,11 +212,11 @@ sidebar:
         divider: false
     pages:
         Über:
-            link: "/Uber"
-            icon: person
+            link: "/ueber"
+            icon: 
             divider: false
         Impressum:
-            link: "/Impressum"
+            link: "/impressum"
             icon: shield
             divider: false
     article_num:
