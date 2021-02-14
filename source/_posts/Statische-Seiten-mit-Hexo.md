@@ -1,7 +1,7 @@
 ---
 title: Statische Seiten mit Hexo
 date: 2021-02-14 09:58:34
-tags: howto, jamstack, hexo
+tags: howto, jamstack, hexo, lamp
 ---
 
 # Übersicht
@@ -18,3 +18,84 @@ LAMP-Stack                    | JAM-Stack
 ![LAMP-Stack](lampstack.png)  | ![JAM-Stack](jamstack.png)
 
 ## Vorteile des JAM-Stacks
+
+Gerade für kleinere Seiten reicht dieses Vorgehen oft aus. Die Vorteile sind folgende:
+
+### Geschwindigkeit
+
+Da der Generierungs-Schritt bei der Auslieferung der Seiten entfällt, steht die Seite schneller bereit. Der Webserver muss nicht auf die Datenbank zugreifen und serverseitige Skripte auswerten, bevor er alle Inhalte der Seite berechnet hat.
+
+### Sicherheit
+
+Ein Einfallstor für Hacker ist oft die Administrationsoberfläche des CMS oder ein Plugin eines Drittherstellers, welches eine Lücke aufweist. Über die serverseitige Auswertung ist damit ein Zugriff auf das Dateisystem und die Datenbank denkbar. Da im JAM-Stack lediglich HTML-Seiten ausgeliefert werden, ist hier kein solcher Zugriff möglich.
+
+### Kosten
+
+Hostingangebote inkludieren den Preis für Datenbank und Rechenleistung. Erstere fällt nun meist weg und letztere reduziert sich enorm, da keine Skripte ausgeführt werden müssen. Folglich lassen sich kleine und kostenlose Hostinglösungen finden. Diese reichen von [GitHub Pages](https://pages.github.com/) bis hin zu Anbietern wie [Netlify](https://www.netlify.com/).
+
+# Seitengeneratoren
+
+Es haben sich eine ganze Reihe von Generatoren am Markt entwickelt. Die meisten verlassen sich dabei bei der Generierung der Seiten auf Node (und somit JavaScript), manche auf den Programmiersprachen Ruby oder Go. Content wird überlicherweise in Form von [Markdown](https://de.wikipedia.org/wiki/Markdown) bereitgestellt, eine Art vereinfachtes HTML. Auch dieser Text wurde in Markdown geschrieben.
+
+## Übersicht
+
+### Jekyll
+
+[Jekyll](http://jekyllrb.com/) eignet sich für kleinere Projekte und privates Blogging. Content wird in Markdown erstellt, über Liquify-Templates gerendert und benötigt hierfür Ruby. Der eine oder andere mag Jekyll von [GitHub Pages](https://pages.github.com/) her kennen, denn dort stellt es die Basis für die Seitenerstellung.
+
+### Hugo
+
+[Hugo](https://gohugo.io/) wurde in Go geschrieben und war einer der ersten statischen Seitengeneratoren. Er ist bekannt für seine hohe Geschwindigkeit.
+
+### Gatsby
+
+[Gatsby](http://gatsbyjs.org/) basiert auf React und ist somit in der Lage, moderne Obeflächen schnell darzustellen. Eine weitere Stärke ist das reichhaltige Plugin-Ökosystem.
+
+### Hexo
+
+[Hexo](https://hexo.io/) setzt auf NodeJS auf und bringt neben hoher Geschwindigkeit auch eine gewisse Kompatibilität zu älteren Frameworks wie Jekyll mit. Da Node bei modernen Webanwendungen nicht fehlen darf, ist die Einstiegsschwelle zur Benutzung niedrig.
+
+# Hexo
+
+Sehen wir uns im Folgenden an, wie man eine kleine Besipielseite mit Hexo erstellt.
+
+## NodeJS
+
+Als Grundlage benötigen wir Node. Das geht entweder über die Paketverwaltung der Wahl (unter Windows sei [Chocolatey](https://chocolatey.org/) empfohlen).
+
+## Hexo
+
+``` bash
+npm install hexo-cli -g
+hexo init blog
+cd blog
+npm install
+hexo server
+```
+
+Ruft man im Browser nun http://localhost:4000 auf, so begrüßt einen die erste eigene Hexo-Seite.
+
+## Inhalt hinzufügen
+
+Inhalte unterscheiden zwischen "Posts" und "Pages", also Blogbeiträge und festen Seiten wie das Impressum.
+
+Einen neuen Blogbeitrag legt man folgendermaßen an:
+
+``` bash
+hexo new post "Mein erster Beitrag"
+```
+
+Im Anschluss kann im ``source\_posts`` Unterordner die leere Seite begutachtet werden. Die Datei beinhaltet bereits das sogennante ``Front-matter``, Metainformationen zur Seite.
+
+Wert |	Beschreibung |	Standardwert
+--------|-------------|------------
+layout |	Layout	|config.default_layout
+title |	Title	| Filename (posts only)
+date |	Published date |	File created date
+updated |	Updated date |	File updated date
+comments |	Enables comment feature for the post |	true
+tags |	Tags | (Not available for pages)
+categories | Categories | (Not available for pages)
+permalink |	Overrides the default permalink of the post |
+excerpt |	Page excerpt in plain text. |
+disableNunjucks |	Disable rendering of Nunjucks tag {{ }}/{% %} and tag plugins when enabled |
