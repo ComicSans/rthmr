@@ -98,4 +98,4 @@ tags |	Tags | (Not available for pages)
 categories | Categories | (Not available for pages)
 permalink |	Overrides the default permalink of the post |
 excerpt |	Page excerpt in plain text. |
-disableNunjucks |	Disable rendering of Nunjucks tag {{ }}/{% %} and tag plugins when enabled |
+disableNunjucks |	Disable rendering of Nunjucks tag and tag plugins when enabled |
