@@ -217,7 +217,7 @@ sidebar:
             divider: false
         Impressum:
             link: "/impressum"
-            icon: shield
+            icon:
             divider: false
     article_num:
         use: false
