@@ -65,7 +65,7 @@ Als Grundlage benötigen wir Node. Das geht entweder über die Paketverwaltung d
 
 ## Hexo
 
-``` bash
+```bash
 npm install hexo-cli -g
 hexo init blog
 cd blog
@@ -81,21 +81,18 @@ Inhalte unterscheiden zwischen "Posts" und "Pages", also Blogbeiträge und feste
 
 Einen neuen Blogbeitrag legt man folgendermaßen an:
 
-``` bash
-hexo new post "Mein erster Beitrag"
-```
+```hexo new post "Mein erster Beitrag"```
 
 Im Anschluss kann im ``source\_posts`` Unterordner die leere Seite begutachtet werden. Die Datei beinhaltet bereits das sogennante ``Front-matter``, Metainformationen zur Seite.
 
 Wert |	Beschreibung |	Standardwert
 --------|-------------|------------
-layout |	Layout	|config.default_layout
-title |	Title	| Filename (posts only)
-date |	Published date |	File created date
-updated |	Updated date |	File updated date
-comments |	Enables comment feature for the post |	true
-tags |	Tags | (Not available for pages)
-categories | Categories | (Not available for pages)
-permalink |	Overrides the default permalink of the post |
-excerpt |	Page excerpt in plain text. |
-disableNunjucks |	Disable rendering of Nunjucks tag and tag plugins when enabled |
+layout |	Das zu verwendende Layout (Post, Pages oder Draft)	|config.default_layout
+title |	Seitentitel	| Filename (posts only)
+date |	Veröffentlichungsdatum |	File created date
+updated | Datum der letzten Änderung |	File updated date
+comments |	Kommentare zulassen |	true
+tags | Tags |
+categories | Kategorien |
+permalink |	Vergibt eine feste URL für diesen Beitrag |
+excerpt |	Falls gewünscht, kann man hier eine kurze Zusammenfassung der Seite verfassen |
