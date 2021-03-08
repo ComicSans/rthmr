@@ -213,7 +213,7 @@ sidebar:
     pages:
         Über:
             link: "/ueber"
-            icon: 
+            icon:
             divider: false
         Impressum:
             link: "/impressum"
@@ -285,7 +285,7 @@ search:
 # Available value:
 #     baidu | google | cnzz
 analytics:
-    google_site_id: "G-0SLXBVQ1RN"
+    google_site_id:
     baidu_site_id:
     cnzz_site_id:
 
