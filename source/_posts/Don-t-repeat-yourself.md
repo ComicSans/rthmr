@@ -1,7 +1,7 @@
 ---
 title: Don't repeat yourself
 date: 2021-03-20 10:40:03
-tags: Software Design Principles CleanCode
+tags: Software Design Principles, Clean Code
 ---
 
 Don’t repeat yourself (DRY, englisch für "wiederhole dich nicht") ist ein Prinzip, das darauf abzielt, Redundanz zu vermeiden oder zumindest zu reduzieren. Es handelt sich hierbei um ein Prinzip von Clean Code.
@@ -34,7 +34,7 @@ Volkswagen is a car manufacturer
 Ford is a car manufacturer
 {% endcode %}
 
-Das Ergebnis is unzweifalhaft richtig. Dennoch haben wir das Wissen, wie ein Array-Eintrag ausgegeben wird, dupliziert (nochmal der Hinweis: das Problem ist nicht die textuelle Wiederholung, sondern dass jede Zeile selbst definiert, wie der Text auszugeben ist).
+Das Ergebnis is unzweifelhaft richtig. Dennoch haben wir das Wissen, wie ein Array-Eintrag ausgegeben wird, dupliziert (nochmal der Hinweis: das Problem ist nicht die textuelle Wiederholung, sondern dass jede Zeile selbst definiert, wie der Text auszugeben ist).
 
 Springen wir in die Zukunft und lassen die drei Hersteller Raketen statt Autos bauen. Dann müssten wir an drei Stellen den Text ändern.
 

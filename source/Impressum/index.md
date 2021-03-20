@@ -4,8 +4,6 @@ date: 2021-02-14 13:50:37
 permalink: impressum
 ---
 
-# Impressum
-
 Angaben gemäß § 5 TMG
 
 Tobias Reithmeier
