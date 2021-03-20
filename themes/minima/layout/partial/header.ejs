@@ -6,7 +6,7 @@
 
 <div class="row">
   <div class="eleven columns">
-    <a href="<%= config.root %>">Home</a> | 
+    <a href="<%= config.root %>">Home</a> |
     <% for (name in theme.menu) { %>
       <% if (theme.menu[name]) { %>
         <a href="<%- url_for(theme.menu[name]) %>"><%- name %></a> |
@@ -21,8 +21,10 @@
     <% } %>
   </div>
   <div class="one column right">
-    <div onclick=setDarkMode(true) id="darkBtn"><%= theme.switch_dark %></div>
-    <div onclick=setDarkMode(false) id="lightBtn" class=hidden><%= theme.switch_light %></div>
+    <div style="margin-top: 10px">
+      <div onclick=setDarkMode(true) id="darkBtn"><%= theme.switch_dark %></div>
+      <div onclick=setDarkMode(false) id="lightBtn" class=hidden><%= theme.switch_light %></div>
+    </div>
     <script >
       if (localStorage.getItem('preferredTheme') == 'dark') {
         setDarkMode(true)
