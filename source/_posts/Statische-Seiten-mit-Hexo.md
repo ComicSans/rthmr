@@ -65,14 +65,13 @@ Als Grundlage benötigen wir Node. Das geht entweder über die Paketverwaltung d
 
 ### Hexo
 
-{% code %}
+```bash
 npm install hexo-cli -g
 hexo init blog
 cd blog
 npm install
 hexo server
-{% endcode %}
-
+```
 
 Ruft man im Browser nun http://localhost:4000 auf, so begrüßt einen die erste eigene Hexo-Seite.
 
@@ -82,9 +81,9 @@ Inhalte unterscheiden zwischen "Posts" und "Pages", also Blogbeiträge und feste
 
 Einen neuen Blogbeitrag legt man folgendermaßen an:
 
-{% code %}
+```bash
 hexo new post "Mein erster Beitrag"
-{% endcode %}
+```
 
 Im Anschluss kann im ``source/_posts``-Unterordner die leere Seite begutachtet werden. Die Datei beinhaltet bereits das sogennante ``Front-matter``, Metainformationen zur Seite. Folgende Werte sind möglich:
 

@@ -34,9 +34,9 @@ Chocolatey lässt sich einfach [installieren](https://chocolatey.org/install) un
 
 Wir benötigen die PowerShell. Da für die Installation Admin-Berechtigungen nötig sind, kann man diese gleich passend starten (Rechtsklick -> "als Adminsitrator ausführen").
 
-{% code %}
+```bash
 choco.exe install notepadplusplus
-{% endcode %}
+```
 
 ## Pakete
 
