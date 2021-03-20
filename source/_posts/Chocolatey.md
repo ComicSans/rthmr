@@ -1,7 +1,8 @@
 ---
 title: Chocolatey
 date: 2021-03-08 10:59:31
-tags: tools
+tags:
+- tools
 ---
 
 Eine Paketverwaltung ermöglicht die komfortable Verwaltung von Software, die in Form von Programmpaketen vorliegt. Dazu gehören Installieren, Aktualisieren und Deinstallieren diese Pakete.

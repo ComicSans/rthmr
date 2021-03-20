@@ -11,7 +11,6 @@ desc: ""
 
 #menu
 menu:
-  Über: /ueber
   Impressum: /impressum
 
 #index/main page max show posts (in number)
@@ -39,7 +38,7 @@ switch_dark: 🌑
 # favicon
 favicon: /images/favicon.png
 # thumbnail
-thumbnail: /images/thumbnail.jpg
+thumbnail: /images/material.png
 
 article:
   thumbnail: true

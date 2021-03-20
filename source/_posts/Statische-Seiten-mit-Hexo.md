@@ -1,7 +1,11 @@
 ---
 title: Statische Seiten mit Hexo
 date: 2021-02-14 09:58:34
-tags: howto, jamstack, hexo, lamp
+tags:
+- howto
+- jamstack
+- hexo
+- lamp
 ---
 
 Klassisch werden kleinere Webseiten  mit einem festen Toolset gehostet: dazu gehören Linux, Apache, MySQL und PHP. Davon leitet sich auch der Name ab, man spricht vom LAMP-Stack. Als Variation tritt manchmal der MAMP-Stack auf, bei dem Linux durch macOS ersetzt wurde. Viele Softwarepakete erfordern diesen Aufbau und entsprechend viele Hosting-Angebote gibt es hier. Wer zum Beispiel ein Wordpress-Blog betreiben will oder ein kleines CMS, der
