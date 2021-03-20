@@ -4,12 +4,10 @@ date: 2021-02-14 09:58:34
 tags: howto, jamstack, hexo, lamp
 ---
 
-# Übersicht
-
 Klassisch werden kleinere Webseiten  mit einem festen Toolset gehostet: dazu gehören Linux, Apache, MySQL und PHP. Davon leitet sich auch der Name ab, man spricht vom LAMP-Stack. Als Variation tritt manchmal der MAMP-Stack auf, bei dem Linux durch macOS ersetzt wurde. Viele Softwarepakete erfordern diesen Aufbau und entsprechend viele Hosting-Angebote gibt es hier. Wer zum Beispiel ein Wordpress-Blog betreiben will oder ein kleines CMS, der
 kommt selten an diesen Angeboten vorbei.
 
-Allen gemein ist der dynamische Aufbei der Webseiten: beim Aufruf der Seite durch den Besucher wird auf Serverseite ein PHP-Prozess gestartet, der Inhalte aus der Datenbank ausliest, HTML-Seiten generiert und diese ausliefert. Ebenfalls können Inhalte über eine Administrationsseite vom Betreiber der Webseiten über das Internet in der Datenbank gespeichert bzw. verändert werden.
+Allen gemein ist der dynamische Aufbau der Webseiten: beim Aufruf der Seite durch den Besucher wird auf Serverseite ein PHP-Prozess gestartet, der Inhalte aus der Datenbank ausliest, HTML-Seiten generiert und diese ausliefert. Ebenfalls können Inhalte über eine Administrationsseite vom Betreiber der Webseiten über das Internet in der Datenbank gespeichert bzw. verändert werden.
 
 Halbwegs neu ist der Ansatz, direkt statische Seiten auszuliefern. Das bedeutet: die Seiten werden nicht dynamisch bei jedem Aufruf neu generiert, sondern einmal erstellt und dann (statisch) gespeichert. Die Benutzung von Datenbank, PHP und ähnlichen Tools entfällt, der Webserver hat nur mit HTML, Javascript und CSS zu tun. Als Begriff hierfür hat sich JAM-Stack etabliert: JavaScript, APIs und Markup.
 
@@ -33,11 +31,9 @@ Ein Einfallstor für Hacker ist oft die Administrationsoberfläche des CMS oder 
 
 Hostingangebote inkludieren den Preis für Datenbank und Rechenleistung. Erstere fällt nun meist weg und letztere reduziert sich enorm, da keine Skripte ausgeführt werden müssen. Folglich lassen sich kleine und kostenlose Hostinglösungen finden. Diese reichen von [GitHub Pages](https://pages.github.com/) bis hin zu Anbietern wie [Netlify](https://www.netlify.com/).
 
-# Seitengeneratoren
+## Seitengeneratoren
 
 Es haben sich eine ganze Reihe von Generatoren am Markt entwickelt. Die meisten verlassen sich dabei bei der Generierung der Seiten auf Node (und somit JavaScript), manche auf den Programmiersprachen Ruby oder Go. Content wird überlicherweise in Form von [Markdown](https://de.wikipedia.org/wiki/Markdown) bereitgestellt, eine Art vereinfachtes HTML. Auch dieser Text wurde in Markdown geschrieben.
-
-## Übersicht
 
 ### Jekyll
 
@@ -55,35 +51,36 @@ Es haben sich eine ganze Reihe von Generatoren am Markt entwickelt. Die meisten 
 
 [Hexo](https://hexo.io/) setzt auf NodeJS auf und bringt neben hoher Geschwindigkeit auch eine gewisse Kompatibilität zu älteren Frameworks wie Jekyll mit. Da Node bei modernen Webanwendungen nicht fehlen darf, ist die Einstiegsschwelle zur Benutzung niedrig.
 
-# Hexo
+## Hexo
 
 Sehen wir uns im Folgenden an, wie man eine kleine Besipielseite mit Hexo erstellt.
 
-## NodeJS
+### NodeJS
 
-Als Grundlage benötigen wir Node. Das geht entweder über die Paketverwaltung der Wahl (unter Windows sei [Chocolatey](https://chocolatey.org/) empfohlen).
+Als Grundlage benötigen wir Node. Das geht entweder über die Paketverwaltung der Wahl (unter Windows sei {% post_link Chocolatey %} empfohlen).
 
-## Hexo
+### Hexo
 
-```bash
-$ npm install hexo-cli -g
-$ hexo init blog
-$ cd blog
-$ npm install
-$ hexo server
-```
+{% code %}
+npm install hexo-cli -g
+hexo init blog
+cd blog
+npm install
+hexo server
+{% endcode %}
+
 
 Ruft man im Browser nun http://localhost:4000 auf, so begrüßt einen die erste eigene Hexo-Seite.
 
-## Inhalt hinzufügen
+### Inhalt hinzufügen
 
 Inhalte unterscheiden zwischen "Posts" und "Pages", also Blogbeiträge und festen Seiten wie das Impressum.
 
 Einen neuen Blogbeitrag legt man folgendermaßen an:
 
-```bash
-$ hexo new post "Mein erster Beitrag"
-```
+{% code %}
+hexo new post "Mein erster Beitrag"
+{% endcode %}
 
 Im Anschluss kann im ``source/_posts``-Unterordner die leere Seite begutachtet werden. Die Datei beinhaltet bereits das sogennante ``Front-matter``, Metainformationen zur Seite. Folgende Werte sind möglich:
 
