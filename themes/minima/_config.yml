@@ -23,7 +23,7 @@ tcolor: 0FA0CE
 # Define path to user css
 #(could be also located outside of theme)
 # Relative to source/ directory
-usercss: css/user.css
+usercss: 
 
 # social profile at the footer/bottom
 footer: true
