@@ -5,7 +5,7 @@ title: "rthmr.de"
 #owner
 owner: "Tobias Reithmeier"
 email: tobias@nerdwana.net
-info: "Frontend developer with focus on TypeScript and Angular. Former full stack PHP developer. Certified project manager. Scrum savy."
+info: "Digital artisan with focus on TypeScript and Angular. Certified project manager. Scrum savy."
 #description
 desc: ""
 
@@ -23,12 +23,13 @@ tcolor: 0FA0CE
 # Define path to user css
 #(could be also located outside of theme)
 # Relative to source/ directory
-usercss: 
+usercss:
 
 # social profile at the footer/bottom
 footer: true
 github: https://github.com/ComicSans
 twitter: https://twitter.com/rthmr
+stackoverflow: https://stackoverflow.com/story/tobiasreithmeier
 
 # Misc
 nanobar: /js/nanobar.min.js
