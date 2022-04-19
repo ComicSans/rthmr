@@ -1,9 +1,7 @@
 ---
 title: Don't repeat yourself
 date: 2021-03-20 10:40:03
-tags:
-- Software Design
-- Clean Code
+tags: Software Design, Clean Code
 ---
 
 Don’t repeat yourself (DRY, englisch für "wiederhole dich nicht") ist ein Prinzip, das darauf abzielt, Redundanz zu vermeiden oder zumindest zu reduzieren. Es handelt sich hierbei um ein Prinzip von Clean Code.
