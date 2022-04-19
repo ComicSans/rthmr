@@ -11,7 +11,6 @@ desc: ""
 
 #menu
 menu:
-  Impressum: /impressum
 
 #index/main page max show posts (in number)
 max_post: 4
@@ -30,11 +29,15 @@ footer: true
 github: https://github.com/ComicSans
 twitter: https://twitter.com/rthmr
 stackoverflow: https://stackoverflow.com/story/tobiasreithmeier
+linkedin: https://linkedin.com/in/tobias-reithmeier
 
 # Misc
 nanobar: /js/nanobar.min.js
 switch_light: ☀️
 switch_dark: 🌑
+
+# Picture enlargement
+picjs: /js/pic.min.js
 
 # favicon
 favicon: /images/favicon.png
@@ -46,4 +49,4 @@ article:
 
 # DISQUS comments (sign up to Disqus to get disqus_shortname)
 disqus_enabled: false
-disqus_shortname: https-adisaktijrs-github-io
+disqus_shortname: 

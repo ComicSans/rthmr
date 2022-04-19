@@ -9,7 +9,7 @@
     }
 %>
 <% if(title) { %>
-   <h3>Beiträge zum Thema <%- title %></h3>
+   <h3>Posts Related to — <%- title %></h3>
 <% } %>
 <% page.posts.each(function(item){ %>
 
@@ -22,7 +22,7 @@
       <div class="nine columns left mb-3">
         <a href="<%- url_for(item.path) %>">
           <% if (item.title == "") { %>
-            kein Titel
+            no title
           <% } else { %>
             <%- item.title %>
           <% } %>
