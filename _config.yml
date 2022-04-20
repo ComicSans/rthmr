@@ -67,9 +67,9 @@ marked:
   anchorAlias: false
   autolink: true
   mangle: true
-  sanitizeUrl: false
+  sanitizeUrl: true
   headerIds: true
-  lazyload: false
+  lazyload: true
   prependRoot: true
   postAsset: true
   external_link:
@@ -92,7 +92,7 @@ feed:
   autodiscovery: true
   template:
 prism_plugin:
-  mode: 'preprocess'    # realtime/preprocess
+  mode: 'realtime'    # realtime/preprocess
   theme: 'default'
   line_number: true    # default false
   custom_css:      # optional
@@ -148,3 +148,39 @@ deploy:
 
 sitemap:
   path: sitemap.xml
+
+all_minifier: true
+
+js_concator:
+  enable: false
+  bundle_path: '/js/bundle.js'
+  front: false
+  silent: true
+
+html_minifier:
+  enable: true
+  ignore_error: false
+  silent: true
+  exclude:
+  
+css_minifier:
+  enable: true
+  silent: true
+  exclude: 
+    - '*.min.css'
+
+js_minifier:
+  enable: true
+  mangle: true
+  silent: true
+  exclude: 
+    - '*.min.js'
+
+image_minifier:
+  enable: true
+  interlaced: false
+  multipass: false
+  optimizationLevel: 2
+  pngquant: false
+  progressive: false
+  silent: true
